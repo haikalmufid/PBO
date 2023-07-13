@@ -1,30 +1,31 @@
 public class PesananBuilder {
-    private String namaBarang;
-    private int jumlah;
-    private double harga;
-    private String alamatPengiriman;
+    private Pesanan pesanan;
+
+    public PesananBuilder() {
+        pesanan = new Pesanan();
+    }
 
     public PesananBuilder setNamaBarang(String namaBarang) {
-        this.namaBarang = namaBarang;
+        pesanan.setNamaBarang(namaBarang);
         return this;
     }
 
     public PesananBuilder setJumlah(int jumlah) {
-        this.jumlah = jumlah;
+        pesanan.setJumlah(jumlah);
         return this;
     }
 
     public PesananBuilder setHarga(double harga) {
-        this.harga = harga;
+        pesanan.setHarga(harga);
         return this;
     }
 
     public PesananBuilder setAlamatPengiriman(String alamatPengiriman) {
-        this.alamatPengiriman = alamatPengiriman;
+        pesanan.setAlamatPengiriman(alamatPengiriman);
         return this;
     }
 
     public Pesanan build() {
-        return new Pesanan(namaBarang, jumlah, harga, alamatPengiriman);
+        return pesanan;
     }
 }
